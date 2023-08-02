@@ -1,0 +1,33 @@
+{{- range $.Values.applications }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: '{{ .name }}'
+spec:
+  destination:
+    namespace: '{{ .tool.namespace }}'
+    server: '{{ .tool.server }}'
+  project: default
+  source:
+    path: '{{ .tool.repo.overlaypath }}'
+    repoURL: '{{ .tool.repo.url }}'
+    targetRevision: '{{ .tool.repo.ref }}'
+    plugin:
+     {{- if eq .tool.plugin.type "helm" }}
+       name: 'helm-kustomize-template-plugin'
+     {{- else if .tool.plugin.type "kustomize" }}
+       name: 'kustomize-template-plugin'
+     {{- end }}
+       env:
+         - name: BASEPATH
+           value: '{{ .tool.repo.basepath }}'
+        {{- if eq .tool.plugin.type "helm" }}
+         - name: VALUEFILES
+           value: '{{ .tool.plugin.values }}'
+        {{- end }}
+  syncPolicy:
+    syncOptions:
+      - PruneLast=true
+      - CreateNamespace=true
+{{- end }}

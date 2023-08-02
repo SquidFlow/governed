@@ -1,0 +1,14 @@
+applications:
+- name: aasyncapp
+  tool:
+    name: aasyncapp
+    namespace: argocd
+    plugin:
+      type: helm
+      values: 'values-applications.yaml'
+    repo:
+      basepath: ../../../manifest/aasyncapp/argocd-apps
+      overlaypath: overlays/app/aasyncapp
+      ref: main
+      url: git@github.com:BeerLii/governed.git
+    server: https://kubernetes.default.svc

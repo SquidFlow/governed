@@ -1,0 +1,26 @@
+---
+# Source: argocd-apps/templates/applications.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'aasyncapp'
+spec:
+  destination:
+    namespace: 'argocd'
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: 'overlays/app/aasyncapp'
+    repoURL: 'git@github.com:BeerLii/governed.git'
+    targetRevision: 'main'
+    plugin:
+       name: 'helm-kustomize-template-plugin'
+       env:
+         - name: BASEPATH
+           value: '../../../manifest/aasyncapp/argocd-apps'
+         - name: VALUEFILES
+           value: 'values-applications.yaml'
+  syncPolicy:
+    syncOptions:
+      - PruneLast=true
+      - CreateNamespace=true
