@@ -25,7 +25,6 @@ applications:
       ref: main
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
-
 - name: app-vault
   tool:
     name: app-vault
@@ -39,20 +38,6 @@ applications:
       ref: main
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
-
-- name: aasynccrds
-  tool:
-    name: aasynccrds
-    namespace: argocd
-    plugin:
-      type: kustomize
-    repo:
-      basepath: ../../../manifest/aasynccrds/argocd/2.7.9
-      overlaypath: overlays/app/aasynccrds
-      ref: main
-      url: git@github.com:BeerLii/platform.git
-    server: https://kubernetes.default.svc
-
 - name: argocd
   tool:
     name: argocd
