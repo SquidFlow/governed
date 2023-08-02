@@ -16,7 +16,7 @@ spec:
     plugin:
      {{- if eq .tool.plugin.type "helm" }}
        name: 'helm-kustomize-template-plugin'
-     {{- else if .tool.plugin.type "kustomize" }}
+     {{- else if eq .tool.plugin.type "kustomize" }}
        name: 'kustomize-template-plugin'
      {{- end }}
        env:
