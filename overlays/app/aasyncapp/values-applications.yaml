@@ -12,3 +12,16 @@ applications:
       ref: main
       url: git@github.com:BeerLii/governed.git
     server: https://kubernetes.default.svc
+- name: platform-vault
+  tool:
+    name: platform-vault
+    namespace: platform-vault
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/vault
+      overlaypath: overlays/app/vault
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
