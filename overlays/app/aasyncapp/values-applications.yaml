@@ -68,6 +68,20 @@ applications:
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
 
+- name: argowf
+  tool:
+    name: argowf
+    namespace: argowf
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/argo-workflows
+      overlaypath: overlays/app/argo-workflows
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
+
 
 
 
