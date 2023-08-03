@@ -61,9 +61,12 @@ applications:
     plugin:
       type: kustomize
     repo:
-      basepath: ../../../manifest/aasynccrds/argocd/2.7.9
+      basepath: ../../../manifest/aasynccrds
       overlaypath: overlays/app/aasynccrds
       ref: main
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
+
+
+
 
