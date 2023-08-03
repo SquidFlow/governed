@@ -30,4 +30,7 @@ spec:
     syncOptions:
       - PruneLast=true
       - CreateNamespace=true
+    {{- if .tool.serverapply }}
+      - ServerSideApply=true
+    {{- end }}
 {{- end }}
