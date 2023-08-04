@@ -91,7 +91,7 @@ applications:
       type: helm
       values: 'values.yaml,replica-values.yaml'
     repo:
-      basepath: ../../../manifest/flask-demo
+      basepath: ../../../manifest/flask_demo
       overlaypath: overlays/app/flask-demo
       ref: main
       url: git@github.com:BeerLii/platform.git
