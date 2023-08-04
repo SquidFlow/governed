@@ -83,5 +83,20 @@ applications:
     server: https://kubernetes.default.svc
 
 
+- name: flask-demo
+  tool:
+    name: flask-demo
+    namespace: flask-demo
+    plugin:
+      type: helm
+      values: 'values.yaml,replica-values.yaml'
+    repo:
+      basepath: ../../../manifest/flask-demo
+      overlaypath: overlays/app/flask-demo
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
+
+
 
 
