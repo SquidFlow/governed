@@ -97,6 +97,19 @@ applications:
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
 
+- name: aasyncrssc
+  tool:
+    name: aasyncrssc
+    namespace: argowf
+    plugin:
+      type: kustomize
+    repo:
+      basepath: ../../../manifest/aasyncrssc
+      overlaypath: overlays/app/aasyncrssc
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
+
 
 
 
