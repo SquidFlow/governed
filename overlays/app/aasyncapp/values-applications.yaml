@@ -123,3 +123,32 @@ applications:
       ref: main
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
+
+- name: fluentd
+  tool:
+    name: fluentd
+    namespace: logging
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/fluentd
+      overlaypath: overlays/app/fluentd
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
+
+- name: fluent-bit
+  tool:
+    name: fluent-bit
+    namespace: logging
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/fluent-bit
+      overlaypath: overlays/app/fluent-bit
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
+
