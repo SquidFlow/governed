@@ -123,3 +123,17 @@ applications:
       ref: main
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
+
+- name: logging-operator
+  tool:
+    name: logging-operator
+    namespace: logging
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/logging-operator
+      overlaypath: overlays/app/logging-operator
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
