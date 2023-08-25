@@ -110,6 +110,36 @@ applications:
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
 
+- name: eck-operator
+  tool:
+    name: eck-operator
+    namespace: logging
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/eck-operator
+      overlaypath: overlays/app/eck-operator
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
+
+- name: eck-stack
+  tool:
+    name: eck-stack
+    namespace: logging
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/eck-stack
+      overlaypath: overlays/app/eck-stack
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
+
+
+
 
 
 
