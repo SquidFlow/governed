@@ -152,3 +152,16 @@ applications:
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
 
+- name: fluent-operator
+  tool:
+    name: fluent-operator
+    namespace: logging
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/fluent-operator
+      overlaypath: overlays/app/fluent-operator
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
