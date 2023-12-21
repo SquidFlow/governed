@@ -165,3 +165,17 @@ applications:
       ref: main
       url: git@github.com:BeerLii/platform.git
     server: https://kubernetes.default.svc
+
+- name: loki
+  tool:
+    name: loki
+    namespace: logging
+    plugin:
+      type: helm
+      values: 'values.yaml'
+    repo:
+      basepath: ../../../manifest/loki
+      overlaypath: overlays/app/loki
+      ref: main
+      url: git@github.com:BeerLii/platform.git
+    server: https://kubernetes.default.svc
