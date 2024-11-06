@@ -24,7 +24,7 @@ applications:
       basepath: ../../../manifest/vault
       overlaypath: overlays/app/vault
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: app-vault
@@ -38,7 +38,7 @@ applications:
       basepath: ../../../manifest/vault
       overlaypath: overlays/app/vault
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: argocd
@@ -51,7 +51,7 @@ applications:
       basepath: ../../../manifest/argocd
       overlaypath: overlays/app/argocd
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: aasynccrds
@@ -65,7 +65,7 @@ applications:
       basepath: ../../../manifest/aasynccrds
       overlaypath: overlays/app/aasynccrds
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: argowf
@@ -79,7 +79,7 @@ applications:
       basepath: ../../../manifest/argo-workflows
       overlaypath: overlays/app/argo-workflows
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 
@@ -94,7 +94,7 @@ applications:
       basepath: ../../../manifest/flask_demo
       overlaypath: overlays/app/flask-demo
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: aasyncrssc
@@ -107,7 +107,7 @@ applications:
       basepath: ../../../manifest/aasyncrssc
       overlaypath: overlays/app/aasyncrssc
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: eck-operator
@@ -121,7 +121,7 @@ applications:
       basepath: ../../../manifest/eck-operator
       overlaypath: overlays/app/eck-operator
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: fluentd
@@ -135,7 +135,7 @@ applications:
       basepath: ../../../manifest/fluentd
       overlaypath: overlays/app/fluentd
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: fluent-bit
@@ -149,7 +149,7 @@ applications:
       basepath: ../../../manifest/fluent-bit
       overlaypath: overlays/app/fluent-bit
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: fluent-operator
@@ -163,7 +163,7 @@ applications:
       basepath: ../../../manifest/fluent-operator
       overlaypath: overlays/app/fluent-operator
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc
 
 - name: loki
@@ -177,5 +177,5 @@ applications:
       basepath: ../../../manifest/loki
       overlaypath: overlays/app/loki
       ref: main
-      url: git@github.com:BeerLii/platform.git
+      url: git@github.com:h4-poc/platform.git
     server: https://kubernetes.default.svc

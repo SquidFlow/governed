@@ -10,5 +10,5 @@ applications:
       basepath: ../../../manifest/aasyncapp/argocd-apps
       overlaypath: overlays/app/aasyncapp
       ref: main
-      url: git@github.com:BeerLii/governed.git
+      url: git@github.com:h4-poc/governed.git
     server: https://kubernetes.default.svc
