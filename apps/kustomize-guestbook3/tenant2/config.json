@@ -1,0 +1,16 @@
+{
+  "appName": "kustomize-guestbook3",
+  "userGivenName": "kustomize-guestbook3",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/kustomize-guestbook3/overlays/tenant2",
+  "srcRepoURL": "https://github.com/squidflow/tenant2-governed.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": {
+    "squidflow.github.io/cluster-appcode": "edsf",
+    "squidflow.github.io/cluster-description": "this application description",
+    "squidflow.github.io/cluster-env": "username",
+    "squidflow.github.io/cluster-tenant": "tenant2"
+  }
+}
